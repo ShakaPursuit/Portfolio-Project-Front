@@ -1,10 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom'
-
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Header from './componenets/LandingPage'
+import './index.css'
+import Header from './componenets/Header'
+import LoginForm from './componenets/LoginForm'
+import ShowAllArtist from './componenets/ShowAllArtists'
 
 
 function App() {
@@ -13,17 +12,25 @@ function App() {
   return (
     <>
       <Router>
+ 
         <Header/>
+   
+        <body>
+
+ 
         <Routes>
 
-          <Route>
+          <Route path="/" element={<LoginForm/>}/>
+          <Route path="/allartists" element={<ShowAllArtist/>}/>
 
 
-          </Route>
+       
 
         </Routes>
 
 
+  
+        </body>
       </Router>
     </>
   )
