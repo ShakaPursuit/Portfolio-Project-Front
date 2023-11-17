@@ -24,12 +24,15 @@ const ShowAllArtist = () => {
   }, []);
 
   return (
+    <>
     <div className="container" id="artist">
       <div className="row" id='single-artist'>
         {artists.map((item, index) => (
-          <div className="col-md-3" key={index} id={item.id}>
+          <div className="col-md-3" key={item.id} id={item.id}>
             <div className="card">
               <div className="card-body">
+                <img className="images" src={`${item.genre}.png`}/>
+          <Link to={`/allartists/${item.id}`}> <button id="profile">Link To Profile</button></Link> 
                 <h5 className="card-title">{item.name}</h5>
                 <p className="card-text">{item.skills}</p>
                 <p className="card-text">{item.genre}</p>
@@ -43,6 +46,8 @@ const ShowAllArtist = () => {
         ))}
       </div>
     </div>
+    
+    </>
   );
 }
 
