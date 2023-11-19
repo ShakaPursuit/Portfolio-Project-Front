@@ -57,7 +57,7 @@ button:focus-visible {
 }
 .col-md-3{border:2px solid red}
 
-.header{background-color: black;height: 100x;width: 100%;margin: 0;}
+.header{background-color:whitesmoke;height: 100x;width: 100%;margin: 0; border:2px solid black}
 label{padding-bottom: 20px;}
 
 #artist{margin-top: 100px;}
@@ -74,7 +74,16 @@ width: 940px;
 #create{color: red;border:2px solid gray;margin-left:400px;margin-top:50px;position: relative;}
 #profile{color: red;border:2px solid gray; margin-left:10px;margin-top:50px;position: relative;}
 .login{margin-top: 450px;}
-.images{width: 200px;width: 170px; margin-left: 3px;border-radius: 15px;position: relative;}
+.images{width: 200px;width: 170px; border-radius: 15px;;}
+.profile-pic{border-radius: 15%; border: 3px solid black;}
+#insta,#fb,#twit,#tik{width: 40px; height: 40px;border:1px dotted whitesmoke}
+.card-body:hover{background-color: orangered;}
+#profile{ font-size:x-small;width: 80px;display: flexbox}
+#create-form{margin-top: 50px;text-align: center;}
+#newProfile{color: #f9f9f9; opacity: 8%}
+#newProfile:hover{
+  opacity: 100%;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

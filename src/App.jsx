@@ -5,6 +5,7 @@ import Header from './componenets/Header'
 import LoginForm from './componenets/LoginForm'
 import ShowAllArtist from './componenets/ShowAllArtists'
 import UserProfile from './componenets/ArtistProfile'
+import CreateArtist from './componenets/CreateArtist'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<LoginForm/>}/>
           <Route path="/allartists" element={<ShowAllArtist/>}/>
           <Route path="allartists/:id" element={<UserProfile/>}/>
+          <Route path="/create" element={<CreateArtist/>}/>
 
 
        

@@ -34,6 +34,9 @@ const UserProfile = () => {
 
   return (
     <>
+    <div className='container2'>
+
+
     <Link to={`/allartists`}>🔙 </Link>
       <div className="container" id="artist">
         <div className="row" id="single-artist">
@@ -45,8 +48,13 @@ const UserProfile = () => {
                 <div className="card">
                   <div className="card-body">
                     <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxyB70rVbnF4eUDtwd1WQQ6noX7sE8ycIiIQ&usqp=CAU'}/>
-                <img src={`/images/${artists.genre}.png`}/>
-                    <button id="profile">Link To Profile</button>
+                <img className='profile-pic' src={`/images/${artists.name}.png`}/>
+                    <button id="profile">Connect with Artist<br></br><img id="insta"src="/images/insta.png"/><br></br>
+                    <img id="fb"src="/images/fb.png"/><br></br>
+                    <img id="tik"src="/images/tik.png"/><br></br>
+                    <img id="twit"src="/images/twit.png"/>
+                    
+                    </button>
                 
                     <h5 className="card-title">Artist Name:<br></br>{artists.name}</h5>
                     <p className="card-text">Skills:{artists.skills}</p>
@@ -63,23 +71,11 @@ const UserProfile = () => {
                
         </div>
       </div>
+      </div>
     </>
   );
 };
 
 export default UserProfile;
-
-// import React from 'react';
-
-// const MyComponent = () => {
-//   return (
-//     <div>
-//       <img src={process.env.PUBLIC_URL + '/images/my-image.jpg'} alt="My Image" />
-//     </div>
-//   );
-// };
-
-// export default MyComponent;
-
 
 

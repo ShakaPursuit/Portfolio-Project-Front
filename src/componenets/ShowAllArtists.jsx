@@ -34,12 +34,12 @@ const ShowAllArtist = () => {
                 <img className="images" src={`${item.genre}.png`}/>
           <Link to={`/allartists/${item.id}`}> <button id="profile">Link To Profile</button></Link> 
                 <h5 className="card-title">{item.name}</h5>
-                <p className="card-text">{item.skills}</p>
-                <p className="card-text">{item.genre}</p>
-                <p className="card-text">{item.instruments}</p>
-                <p className="card-text">{item.independent}</p>
-                <p className="card-text">{item.years_of_experience}</p>
-                <p className="card-text">{item.record_label}</p>
+                <p className="card-text">&nbsp;&nbsp;<strong>Skills:&nbsp;</strong>{item.skills}</p>
+                <p className="card-text"><strong>Genre:&nbsp;</strong>{item.genre}</p>
+                {/* <p className="card-text">{item.instruments}</p> */}
+                <p className="card-text">&nbsp;&nbsp;&nbsp;<strong>Indie:</strong>{item.independent?"✅":"❌"}</p>
+                {/* <p className="card-text">{item.years_of_experience}</p> */}
+                <p className="card-text"><strong>Label:&nbsp;</strong>{item.record_label}</p>
               </div>
             </div>
           </div>
