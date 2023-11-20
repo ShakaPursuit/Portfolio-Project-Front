@@ -1,7 +1,8 @@
 import React,{useEffect, useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 
 
 const CreateArtist =()=>{
@@ -27,6 +28,9 @@ const formData={
     years_of_experience:newArtist.years_of_experience,
     record_label:newArtist.record_label
 }
+const navigate=useNavigate()
+
+const {id}=useParams()
 
 
 const handlePost=()=>{
@@ -46,6 +50,7 @@ const handlePost=()=>{
                             
                                       const data = await response.json();
                                       console.log(data);
+                                      navigate(`/allartists/${data.id}`)
                             
                                     } catch (error) {
                                             console.error("Fetch error:", error);
@@ -64,6 +69,7 @@ const handlePost=()=>{
     const handleSubmit=(e)=>{
         e.preventDefault()
         handlePost()
+       
     }
 
 

@@ -80,7 +80,8 @@ width: 940px;
 .card-body:hover{background-color: orangered;}
 #profile{ font-size:x-small;width: 80px;display: flexbox}
 #create-form{margin-top: 50px;text-align: center;}
-#newProfile{color: #f9f9f9; opacity: 8%}
+#newProfile{color:red;border:2px solid red}
+#delete{margin-left:200px; margin-bottom: 50px; border:2px solid red}
 #newProfile:hover{
   opacity: 100%;
 }

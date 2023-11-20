@@ -104,7 +104,8 @@ const UserProfile = () => {
       </div>
       <div>
         <button onClick={confirmDelete}> Delete Artist Profile</button>
-      </div>
+      </div><br></br>
+      <div><Link to={`/allartists/${id}/edit`}><button id='delete'> Edit Profile</button></Link></div>
     </>
   );
 };
