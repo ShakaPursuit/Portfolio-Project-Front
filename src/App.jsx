@@ -7,24 +7,51 @@ import ShowAllArtist from './componenets/ShowAllArtists'
 import UserProfile from './componenets/ArtistProfile'
 import CreateArtist from './componenets/CreateArtist'
 import EditArtist from './componenets/EditArtist'
+import { useState } from 'react'
+import ProtectedRoute from './componenets/Authentication'
 
 
-function App() {
+
+
+
+function App(isLoggedIn) {
+  const [isLoggedInn, setIsLoggedInn] = useState(false);
+  const logIn = () => {
+   
+    setIsLoggedInn(true)
+  };
+  const logOut = () => {
+    setIsLoggedInn(false)
+    
+ 
+
+  };
   
 
   return (
     <>
       <Router>
  
-        <Header/>
+        <Header />
+        {isLoggedIn? (
+       <button onClick={logOut}>SignOut</button>
+     ) : (
+       <button onClick={logIn}>SigIn</button>
+     )}
    
 
 
  
         <Routes>
 
-          <Route path="/" element={<LoginForm/>}/>
-          <Route path="/allartists" element={<ShowAllArtist/>}/>
+          <Route path="/" element={<LoginForm />}/>
+          <Route path="/allartists"
+           element={<ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ShowAllArtist/>
+           </ProtectedRoute>
+          
+          }
+          />
           <Route path="allartists/:id" element={<UserProfile/>}/>
           <Route path="allartists/:id/edit" element={<EditArtist/>}/>
           <Route path="/create" element={<CreateArtist/>}/>
@@ -43,3 +70,5 @@ function App() {
 }
 
 export default App
+
+ 

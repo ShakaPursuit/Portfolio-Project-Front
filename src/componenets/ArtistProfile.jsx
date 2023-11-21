@@ -48,11 +48,12 @@ const UserProfile = () => {
   }
   const confirmDelete=()=>{
 
-    confirm(`Are you sure you would like to delete your profile`)
+   const reallyDeleteIndex= confirm(`Are you sure you would like to delete your profile`)
+    if(reallyDeleteIndex){
    
       handleDelete()
     
-
+    }
   }
 
 
