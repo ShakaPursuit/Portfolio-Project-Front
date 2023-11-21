@@ -13,7 +13,7 @@ const CreateArtist =()=>{
 
         name:"",
         skills:"",
-        genre:"",
+        genre:"Alternative",
         instruments:"",
         independent:Boolean,
         years_of_experience:"",
@@ -85,7 +85,7 @@ return (<>
         <label>Skills:</label>
         <input type="text" name="skills" value={newArtist.skills} onChange={handeTextChange}></input><br></br>
         <label>Genre:</label>
-            <select type="select" className='genre'  name="genre" value={newArtist.genre} onChange={handeTextChange} >
+            <select type="text" className='genre'  name="genre" value={newArtist.genre} onChange={handeTextChange} >
                 <option value="Alternative">Alternative</option>
                 <option value="Indie">Indie</option>
                 <option value="Funk">Funk</option>

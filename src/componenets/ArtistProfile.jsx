@@ -16,7 +16,6 @@ const UserProfile = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-        // console.log(`${API}/${id}`)
       try {
         const response = await fetch(`${API}/${id}`);
         if (!response.ok) {
@@ -60,6 +59,7 @@ const UserProfile = () => {
 
   return (
     <>
+    <body>
     <div className='container2'>
 
 
@@ -80,10 +80,10 @@ const UserProfile = () => {
             <img className='profile-pic' src={`/images/default.png`}/>:  <img className='profile-pic' src={`/images/${artists.name}.png`}/> 
 }
                   
-                    <button id="profile">Connect with Artist<br></br><img id="insta"src="/images/insta.png"/><br></br>
-                    <img id="fb"src="/images/fb.png"/><br></br>
-                    <img id="tik"src="/images/tik.png"/><br></br>
-                    <img id="twit"src="/images/twit.png"/>
+                    <button id="profile">Connect with Artist<br></br><a href='https://www.instagram.com/'><img id="insta"src="/images/insta.png"/></a><br></br>
+                   <a href='https://www.facebook.com/'> <img id="fb"src="/images/fb.png"/></a><br></br>
+                   <a href="https://www.tiktok.com/"> <img id="tik"src="/images/tik.png"/></a><br></br>
+                    <a href="https://www.twitter.com/"><img id="twit"src="/images/twit.png"/></a>
                     
                     </button>
                 
@@ -104,9 +104,10 @@ const UserProfile = () => {
       </div>
       </div>
       <div>
-        <button onClick={confirmDelete}> Delete Artist Profile</button>
+        <button id='delete' onClick={confirmDelete}> Delete Artist Profile</button>
       </div><br></br>
       <div><Link to={`/allartists/${id}/edit`}><button id='delete'> Edit Profile</button></Link></div>
+      </body>
     </>
   );
 };

@@ -89,15 +89,15 @@ const EditArtist = () => {
         <div id="create-form">
           <div className="card">
             <form onSubmit={handleSubmit}>
-              <label>Artist Name:</label>
+              <label htmlFor='name'>Artist Name:</label>
               <input type="text" name="name" value={newArtist.name} onChange={handleTextChange} />
               <br />
-              <label>Skills:</label>
+              <label htmlFor='skills'>Skills:</label>
               <input type="text" name="skills" value={newArtist.skills} onChange={handleTextChange} />
               <br />
-              <label for="genre">Genre:</label>
+              <label htmlFor="genre">Genre:</label>
               <select
-                type="select"
+                // type="select"
                 className="genre"
                 name="genre"
                 value={newArtist.genre}
@@ -116,7 +116,7 @@ const EditArtist = () => {
                 <option value="Rock">Rock</option>
               </select>
               <br />
-              <label for="instruments">Instruments:</label>
+              <label htmlFor="instruments">Instruments:</label>
               <input
                 placeholder="instruments/skills"
                 type="text"
@@ -125,8 +125,9 @@ const EditArtist = () => {
                 onChange={handleTextChange}
               />
               <br />
-              <label for="independent">Indie/Major:</label>
+              <label htmlFor="independent">Indie/Major:</label>
               <select
+              // type='select'
                 id="independent"
                 name="independent"
                 value={newArtist.independent}
@@ -136,7 +137,7 @@ const EditArtist = () => {
                 <option value={false}>False</option>
               </select>
               <br />
-              <label for='years_of_experience'>Experience in Years:</label>
+              <label htmlFor='years_of_experience'>Experience in Years:</label>
               <input
                 placeholder="#"
                 type="number"
@@ -147,7 +148,7 @@ const EditArtist = () => {
                   max="50"
               />
               <br />
-              <label for='record_label'>Company/Label:</label>
+              <label htmlFor='record_label'>Company/Label:</label>
               <input
                   placeholder="Label/Company"
                   type="text"
@@ -155,6 +156,7 @@ const EditArtist = () => {
                   value={newArtist.record_label}
                   onChange={handleTextChange}
               />
+              &nbsp;&nbsp;
   
               <button id="editProfile" type="submit">Save Changes</button>
             </form>
